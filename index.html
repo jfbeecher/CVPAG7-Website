@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Central Valley Project Agave Growers 7 | Central Valley Project Agave Growers 7 LLC</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Barlow+Condensed:wght@300;400;500;600&amp;family=Barlow:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --sand:#C8A96E;
+  --sand-light:#F2EAD9;
+  --agave:#4A7B6F;
+  --agave-dark:#2C4F45;
+  --agave-deep:#1A3330;
+  --earth:#7A5C3A;
+  --bone:#F7F2EB;
+  --ink:#1C1C1A;
+  --muted:#6B6459;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bone);color:var(--ink);overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(26,51,48,0.93);backdrop-filter:blur(8px);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:#F7F2EB;letter-spacing:0.06em;font-style:italic;}
+.nav-logo span{font-style:normal;font-weight:600;}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{text-decoration:none;color:rgba(247,242,235,0.75);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:#C8A96E;}
+
+.hero{height:100vh;position:relative;display:flex;align-items:flex-end;padding-bottom:8rem;overflow:hidden;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(26,51,48,0.93) 0%, rgba(26,51,48,0.4) 55%, rgba(26,51,48,0.15) 100%);}
+.hero-content{position:relative;z-index:2;padding:0 4rem;max-width:820px;}
+.hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--sand);margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;}
+.hero-eyebrow::after{content:'';display:block;width:60px;height:1px;background:var(--sand);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,7vw,6.5rem);line-height:0.95;color:var(--bone);font-weight:600;margin-bottom:1.8rem;}
+.hero h1 em{font-style:italic;color:var(--sand);}
+.hero-sub{font-size:1rem;color:rgba(247,242,235,0.7);max-width:500px;line-height:1.75;font-weight:300;margin-bottom:2.5rem;}
+.btn-primary{display:inline-block;padding:0.85rem 2.2rem;background:var(--sand);color:var(--agave-deep);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;border:none;cursor:pointer;}
+.btn-primary:hover{background:var(--bone);}
+.btn-outline{display:inline-block;padding:0.85rem 2.2rem;border:1px solid rgba(247,242,235,0.4);color:var(--bone);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;transition:all 0.25s;margin-left:1rem;cursor:pointer;}
+.btn-outline:hover{border-color:var(--sand);color:var(--sand);}
+.hero-stat-bar{position:absolute;bottom:0;left:0;right:0;z-index:2;display:flex;border-top:1px solid rgba(200,169,110,0.3);background:rgba(26,51,48,0.88);}
+.hero-stat{flex:1;padding:1.5rem 2rem;border-right:1px solid rgba(200,169,110,0.2);}
+.hero-stat:last-child{border-right:none;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--sand);font-weight:600;line-height:1;}
+.stat-label{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(247,242,235,0.55);margin-top:0.3rem;}
+
+.section{padding:7rem 4rem;}
+.section-dark{background:var(--agave-deep);color:var(--bone);}
+.section-sand{background:var(--sand-light);}
+.label{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--sand);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
+.label::before{content:'';display:block;width:30px;height:1px;background:var(--sand);}
+.section-sand .label{color:var(--earth);}
+.section-sand .label::before{background:var(--earth);}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:600;line-height:1.1;margin-bottom:1.5rem;}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;max-width:1200px;margin:0 auto;}
+.about-text p{font-size:1rem;line-height:1.85;color:var(--muted);margin-bottom:1.2rem;font-weight:300;}
+.about-text p strong{color:var(--ink);font-weight:500;}
+.timeline{margin-top:2.5rem;border-left:1px solid var(--sand);padding-left:2rem;}
+.tl-item{position:relative;margin-bottom:1.4rem;}
+.tl-item::before{content:'';position:absolute;left:-2.38rem;top:0.35rem;width:8px;height:8px;background:var(--sand);border-radius:50%;}
+.tl-year{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;letter-spacing:0.15em;color:var(--sand);text-transform:uppercase;}
+.tl-desc{font-size:0.88rem;color:var(--muted);margin-top:0.15rem;font-weight:300;}
+.img-stack{position:relative;height:520px;}
+.img-main{width:85%;height:440px;object-fit:cover;position:absolute;top:0;right:0;}
+.img-accent{width:55%;height:240px;object-fit:cover;position:absolute;bottom:0;left:0;border:6px solid var(--bone);}
+
+.agave-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1200px;margin:4rem auto 0;}
+.agave-card{padding:2.5rem 2rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.15);}
+.agave-card-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--sand);font-weight:600;line-height:1;}
+.agave-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);margin:0.5rem 0;}
+.agave-card p{font-size:0.87rem;line-height:1.75;color:rgba(247,242,235,0.55);font-weight:300;}
+
+.fields-header{max-width:1200px;margin:0 auto 4rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;}
+.fields-header h2{margin-bottom:0;}
+.growth-chart{max-width:1200px;margin:0 auto;}
+.chart-row{display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;}
+.chart-year{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);width:50px;flex-shrink:0;}
+.chart-bar-wrap{flex:1;background:#E8E3D8;height:48px;position:relative;overflow:hidden;}
+.chart-bar{height:100%;background:var(--agave);display:flex;align-items:center;padding-left:1rem;}
+.chart-val{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;letter-spacing:0.08em;color:var(--bone);white-space:nowrap;}
+.chart-acres{font-size:0.85rem;color:var(--muted);width:100px;flex-shrink:0;text-align:right;font-weight:300;}
+
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3px;max-width:1400px;margin:0 auto;}
+.gallery img{width:100%;height:320px;object-fit:cover;display:block;}
+.gallery img:first-child{height:100%;grid-row:span 2;}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;max-width:1100px;margin:0 auto;align-items:start;}
+.contact-info h3{font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:0.4rem;margin-top:1.5rem;}
+.contact-info p{font-size:0.95rem;line-height:1.65;font-weight:300;}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:0.85rem 0;border:none;border-bottom:1px solid #D5CCBE;background:transparent;font-family:'Barlow',sans-serif;font-size:0.9rem;color:var(--ink);margin-bottom:1.5rem;outline:none;font-weight:300;appearance:none;-webkit-appearance:none;}
+.contact-form textarea{height:110px;resize:none;}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#B5AA9E;}
+.contact-form select{color:var(--muted);cursor:pointer;}
+.contact-form input:focus,.contact-form textarea:focus{border-bottom-color:var(--agave);}
+.submit-btn{padding:0.9rem 2.5rem;background:var(--agave-deep);color:var(--bone);font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer;transition:background 0.2s;}
+.submit-btn:hover{background:var(--agave);}
+
+footer{background:var(--ink);padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:rgba(247,242,235,0.6);font-style:italic;}
+.footer-note{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,242,235,0.3);}
+
+@media(max-width:900px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;}
+  .agave-grid{grid-template-columns:1fr 1fr;}
+  .gallery{grid-template-columns:1fr 1fr;}
+  .gallery img:first-child{grid-row:span 1;}
+  .hero-stat-bar{flex-wrap:wrap;}
+  .hero-stat{flex:1 1 50%;}
+  nav{padding:1rem 1.5rem;}
+  .nav-links{gap:1.5rem;}
+  .section{padding:5rem 1.5rem;}
+}
+
+/* Netlify production refinements */
+nav{min-height:72px;}
+.hero{padding-top:72px;}
+.hero-content{padding-top:0;}
+.hero-title{
+  white-space:normal;
+  overflow-wrap:balance;
+  max-width:920px;
+  font-size:clamp(2.4rem,5.4vw,5.1rem);
+  line-height:1;
+  margin:0 0 1.2rem 0;
+  color:var(--bone);
+  text-shadow:0 4px 18px rgba(0,0,0,0.35);
+}
+.hero-title + .hero-sub{margin-top:0;}
+.gallery{grid-auto-flow:dense;}
+.gallery img{transition:transform .3s ease, filter .3s ease;}
+.gallery img:hover{transform:scale(1.015);filter:saturate(1.05);}
+.contact-form button{margin-top:.25rem;}
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown),
+.contact-form select:invalid{border-bottom-color:#9E553F;}
+@media(max-width:900px){
+  nav{position:absolute;align-items:flex-start;gap:1rem;}
+  .nav-links{flex-wrap:wrap;justify-content:flex-end;gap:.8rem 1.2rem;}
+  .hero{min-height:100vh;height:auto;padding-top:110px;padding-bottom:10rem;}
+  .hero-content{padding:0 1.5rem;max-width:100%;}
+  .hero-title{white-space:normal;font-size:clamp(2.35rem,10.5vw,4rem);line-height:1.02;}
+  .hero-sub{font-size:.98rem;}
+  .btn-outline{margin-left:0;margin-top:.75rem;}
+  .gallery{grid-template-columns:1fr;}
+  .gallery img,.gallery img:first-child{height:auto;max-height:none;grid-row:auto;}
+}
+@media(max-width:520px){
+  nav{padding:.85rem 1rem;}
+  .nav-logo{font-size:.95rem;}
+  .nav-links a{font-size:.75rem;}
+  .hero{padding-top:130px;}
+  .hero-title{font-size:clamp(2rem,10vw,3rem);line-height:1.04;}
+  .hero-stat{flex:1 1 100%;}
+}
+</style>
+
+<style>
+h1 {
+    position: relative !important;
+    z-index: 5 !important;
+}
+.hero, .hero-section, .header-content {
+    padding-top: 80px !important;
+}
+</style>
+
+<meta content="California-grown blue agave from Five Points in the San Joaquin Valley. Central Valley Project Agave Growers 7 LLC combines four generations of farming expertise with a resilient new American crop." name="description"/><meta content="California agave, blue agave, San Joaquin Valley agave, Five Points California, domestic agave, agave growers, Central Valley Project Agave" name="keywords"/><meta content="Central Valley Project Agave Growers 7 LLC" name="author"/><meta content="index, follow" name="robots"/><meta content="Central Valley Project Agave Growers 7" property="og:title"/><meta content="Premium California-grown agave from Five Points in the San Joaquin Valley." property="og:description"/><meta content="website" property="og:type"/><meta content="https://centralvalleyprojectagave.com/" property="og:url"/><meta content="https://centralvalleyprojectagave.com/assets/images/hero-agave-rows.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Central Valley Project Agave Growers 7" name="twitter:title"/><meta content="Premium California-grown agave from Five Points in the San Joaquin Valley." name="twitter:description"/><meta content="#1A3330" name="theme-color"/><link href="https://centralvalleyprojectagave.com/" rel="canonical"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Central Valley Project Agave Growers 7 LLC",
+  "url": "https://centralvalleyprojectagave.com/",
+  "description": "California-grown agave farm in Five Points, California.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Five Points",
+    "addressRegion": "CA",
+    "postalCode": "93624",
+    "addressCountry": "US"
+  },
+"foundingDate": "2023",
+  "image": "https://centralvalleyprojectagave.com/assets/images/hero-agave-rows.jpg"
+}</script>
+<style>
+/* Hero/title clearance fix */
+.nav-logo{font-style:normal;font-weight:600;letter-spacing:0.12em;}
+.hero-content{padding-top:120px;}
+@media(max-width:900px){
+  .hero{padding-top:165px;}
+  .hero-content{padding-top:0;}
+}
+@media(max-width:520px){
+  .hero{padding-top:185px;}
+  .hero-title{font-size:clamp(1.85rem,9.5vw,2.8rem);}
+}
+</style>
+
+<style>
+/* Final fix: keep the top banner in normal page flow so it cannot cover the hero title */
+nav{position:sticky !important;top:0 !important;min-height:72px !important;}
+.hero{min-height:calc(100vh - 72px) !important;height:auto !important;padding-top:3rem !important;align-items:flex-start !important;}
+.hero-content{padding-top:2rem !important;}
+.hero-title{margin-top:0 !important;}
+@media(max-width:900px){
+  nav{position:sticky !important;}
+  .hero{padding-top:2.25rem !important;padding-bottom:10rem !important;}
+  .hero-content{padding-top:1rem !important;}
+}
+@media(max-width:520px){
+  .hero{padding-top:2rem !important;}
+}
+</style>
+
+<style>
+/* Final clean hero title sizing */
+.hero-content {
+  max-width: 100%;
+  width: 100%;
+  padding-left: clamp(1rem, 4vw, 4rem);
+  padding-right: clamp(1rem, 4vw, 4rem);
+}
+
+.hero-title,
+.hero h1.hero-title {
+  font-size: clamp(1.08rem, 3.8vw, 3rem) !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+  text-align: left !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  letter-spacing: 0.01em !important;
+}
+
+@media (max-width: 520px) {
+  .hero-title,
+  .hero h1.hero-title {
+    font-size: clamp(0.99rem, 3.7vw, 1.42rem) !important;
+  }
+}
+</style>
+
+
+<style>
+/* Contact section logo replacement */
+.contact-logo-replacement {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-logo-replacement img {
+  width: min(100%, 520px);
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(26, 51, 48, 0.16);
+}
+@media(max-width:900px){
+  .contact-logo-replacement img { width: min(100%, 420px); }
+}
+</style>
+
+</head>
+<body>
+<nav>
+<div class="nav-logo"><span>CVPAG7</span></div>
+<ul class="nav-links">
+<li><a href="#about">Our Story</a></li>
+<li><a href="#agave">The Agave</a></li>
+<li><a href="#fields">Our Fields</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section class="hero">
+<img alt="Rows of mature blue agave in the Central Valley with the Diablo Range in the background" class="hero-img" decoding="async" height="900" loading="eager" src="assets/images/hero-agave-rows.jpg" width="1200"/>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-eyebrow">Five Points, California — Est. 1929</div>
+
+
+<h1 class="hero-title">Central Valley Project Agave Growers 7 LLC</h1><p class="hero-sub">Pioneering domestic agave cultivation in the heart of the San Joaquin Valley. Central Valley Project Agave Growers 7 LLC — four generations of farming expertise, reimagined for a new American crop.</p>
+<a class="btn-primary" href="#about">Discover Our Story</a>
+<a class="btn-outline" href="#contact">Inquire About Supply</a>
+</div>
+<div class="hero-stat-bar">
+<div class="hero-stat">
+<div class="stat-num">225+</div>
+<div class="stat-label">Acres Under Cultivation</div>
+</div>
+<div class="hero-stat">
+<div class="stat-num">2023</div>
+<div class="stat-label">First Agave Planting</div>
+</div>
+<div class="hero-stat">
+<div class="stat-num">95</div>
+<div class="stat-label">Years of Family Farming</div>
+</div>
+<div class="hero-stat">
+<div class="stat-num">100%</div>
+<div class="stat-label">California Grown</div>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<div class="about-grid">
+<div class="about-text">
+<div class="label">Our Story</div>
+<h2>A Century of<br/>California Soil</h2>
+<p>Our family began farming in <strong>Five Points, California in 1929</strong> — when the San Joaquin Valley was still being settled. Nearly a century later, we remain committed to the same land, the same values, and the relentless pursuit of what this remarkable soil can grow.</p>
+<p>In Spring 2023, we took a bold step: planting the first agave crop in our farm's history. Recognizing the surging domestic demand for California-grown agave and the ideal growing conditions of the western San Joaquin Valley, we launched <strong>Central Valley Project Agave Growers 7 LLC</strong> to become a premier domestic supplier.</p>
+<p>Our land sits at the foot of the Diablo Range — the same intense sun, dry heat, and well-drained alkaline soils that make agave thrive in the highlands of Mexico are right here in the Central Valley.</p>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-year">1929</div>
+<div class="tl-desc">Family begins farming in Five Points, CA</div>
+</div>
+<div class="tl-item">
+<div class="tl-year">Spring 2023</div>
+<div class="tl-desc">First 30 acres planted — Central Valley Project Agave Growers 7 LLC founded</div>
+</div>
+<div class="tl-item">
+<div class="tl-year">2024</div>
+<div class="tl-desc">Second planting: 30 additional acres established</div>
+</div>
+<div class="tl-item">
+<div class="tl-year">2025</div>
+<div class="tl-desc">Major expansion: 90 acres planted, growing to scale</div>
+</div>
+<div class="tl-item">
+<div class="tl-year">2026</div>
+<div class="tl-desc">75 acres added — 225+ total acres under cultivation</div>
+</div>
+</div>
+</div>
+<div class="about-visual">
+<div class="img-stack">
+<img alt="Agave rows with farm structures and Diablo Range mountains in background" class="img-main" decoding="async" height="750" loading="lazy" src="assets/images/farm-agave-mountains.jpg" width="1000"/>
+<img alt="Young agave plantings in freshly worked Central Valley soil" class="img-accent" decoding="async" height="800" loading="lazy" src="assets/images/young-agave-plantings.jpg" width="600"/>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-dark" id="agave">
+<div style="max-width:1200px;margin:0 auto;">
+<div class="label">The Agave</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;margin-top:1rem;">
+<div>
+<h2 style="color:var(--bone);">Keeping the World's<br/>Best Land <em style="color:var(--sand);">Alive</em></h2>
+<p style="font-size:1rem;line-height:1.85;color:rgba(247,242,235,0.65);font-weight:300;margin-bottom:1.2rem;">Our agave is grown on ground that would otherwise sit idle — not by choice, but by mandate. Our farm lies within the <strong style="color:var(--bone);font-weight:500;">Westlands Water District</strong>, the largest agricultural water district in the United States, covering over 600,000 acres of the western San Joaquin Valley.</p>
+<p style="font-size:1rem;line-height:1.85;color:rgba(247,242,235,0.65);font-weight:300;margin-bottom:1.2rem;">Westlands receives its water through the federal Central Valley Project, which diverts water from Northern California’s rivers southward to farms and cities. For decades, this system sustained some of the most productive farmland on earth. But under the <strong style="color:var(--bone);font-weight:500;">Endangered Species Act</strong> and a series of federal court rulings and biological opinions designed to protect Sacramento-San Joaquin Delta fish species — including the Delta smelt and Chinook salmon — water deliveries to Westlands have been severely and repeatedly curtailed. In many years, farmers receive a fraction of their contracted supply, and in dry years, deliveries can fall to zero.</p>
+<p style="font-size:1rem;line-height:1.85;color:rgba(247,242,235,0.65);font-weight:300;margin-bottom:1.2rem;">The result: some of the most fertile, productive soil in the world is being <strong style="color:var(--bone);font-weight:500;">intentionally fallowed</strong> — left unplanted and unproductive — simply because there is no water to farm it conventionally.</p>
+<p style="font-size:1rem;line-height:1.85;color:rgba(247,242,235,0.65);font-weight:300;">We refused to accept that outcome for our land. Agave offered a way forward.</p>
+</div>
+<div>
+<div style="border-left:1px solid rgba(200,169,110,0.3);padding-left:2.5rem;margin-bottom:3rem;">
+<p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--sand);line-height:1.5;">“Some of the most productive farmland in the world was going to be left fallow. We needed a crop that could survive on what little water we have — and agave is that crop.”</p>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+<div style="padding:1.75rem 1.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.15);">
+<div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--sand);font-weight:600;line-height:1;">600K+</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);margin:0.4rem 0 0.5rem;">Acres in Westlands</div>
+<p style="font-size:0.82rem;line-height:1.7;color:rgba(247,242,235,0.5);font-weight:300;">The largest federal water district in the U.S. — and among the most threatened by water cutbacks.</p>
+</div>
+<div style="padding:1.75rem 1.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.15);">
+<div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--sand);font-weight:600;line-height:1;">0%</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);margin:0.4rem 0 0.5rem;">Water in Dry Years</div>
+<p style="font-size:0.82rem;line-height:1.7;color:rgba(247,242,235,0.5);font-weight:300;">In critically dry years, Westlands farmers can receive zero water allocation from the Central Valley Project.</p>
+</div>
+<div style="padding:1.75rem 1.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.15);">
+<div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--sand);font-weight:600;line-height:1;">Resilient</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);margin:0.4rem 0 0.5rem;">Agave Won’t Die</div>
+<p style="font-size:0.82rem;line-height:1.7;color:rgba(247,242,235,0.5);font-weight:300;">Unlike cotton, tomatoes, or almonds, agave can withstand extended periods without irrigation — it will slow, but it will not die.</p>
+</div>
+<div style="padding:1.75rem 1.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.15);">
+<div style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--sand);font-weight:600;line-height:1;">Active</div>
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bone);margin:0.4rem 0 0.5rem;">Land Stays Farmed</div>
+<p style="font-size:0.82rem;line-height:1.7;color:rgba(247,242,235,0.5);font-weight:300;">Agave keeps our land productive, our family farming, and our community employed — rather than surrendering our fields to fallow.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-sand" id="fields">
+<div class="fields-header">
+<div>
+<div class="label">Our Fields</div>
+<h2>Growing Year by Year</h2>
+</div>
+<p style="max-width:320px;font-size:0.88rem;color:var(--muted);line-height:1.75;font-weight:300;">From 30 acres in 2023 to over 225 acres today — our agave operation is scaling rapidly to meet growing market demand.</p>
+</div>
+<div class="growth-chart">
+<div class="chart-row">
+<div class="chart-year">2023</div>
+<div class="chart-bar-wrap">
+<div class="chart-bar" style="width:13.3%;"><span class="chart-val">Inaugural Planting</span></div>
+</div>
+<div class="chart-acres">30 acres</div>
+</div>
+<div class="chart-row">
+<div class="chart-year">2024</div>
+<div class="chart-bar-wrap">
+<div class="chart-bar" style="width:13.3%;"><span class="chart-val">Year 2</span></div>
+</div>
+<div class="chart-acres">30 acres</div>
+</div>
+<div class="chart-row">
+<div class="chart-year">2025</div>
+<div class="chart-bar-wrap">
+<div class="chart-bar" style="width:40%;"><span class="chart-val">Major Expansion</span></div>
+</div>
+<div class="chart-acres">90 acres</div>
+</div>
+<div class="chart-row">
+<div class="chart-year">2026</div>
+<div class="chart-bar-wrap">
+<div class="chart-bar" style="width:33.3%;"><span class="chart-val">Continued Growth</span></div>
+</div>
+<div class="chart-acres">75 acres</div>
+</div>
+<div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #D5CCBE;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+<div style="font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">Total Acres Under Cultivation</div>
+<div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--agave-dark);font-weight:600;">225+ Acres</div>
+</div>
+</div>
+<div style="margin-top:5rem;">
+<div class="label">From the Field</div>
+<h2 style="margin-bottom:2rem;">The Fields of<br/>Five Points</h2>
+<div class="gallery">
+<img alt="Mature agave rows stretching to the horizon at Five Points" decoding="async" height="600" loading="lazy" src="assets/images/five-points-agave-horizon.jpg" width="800"/>
+<img alt="Agave crop rows with Diablo Range mountains in background" decoding="async" height="600" loading="lazy" src="assets/images/diablo-range-agave-crop.jpg" width="800"/>
+<img alt="Early agave plantings showing young growth in Central Valley soil" decoding="async" height="600" loading="lazy" src="assets/images/early-agave-growth.jpg" width="800"/>
+<img alt="Agave harvest in Five Points field" decoding="async" height="1800" loading="lazy" src="assets/images/agave-harvest-field.jpg" width="1350"/>
+<img alt="Agave rows with farm dog" decoding="async" height="1024" loading="lazy" src="assets/images/agave-rows-farm-dog.jpg" width="768"/>
+<img alt="Mature blue agave rows" decoding="async" height="1800" loading="lazy" src="assets/images/mature-blue-agave-rows.jpg" width="1350"/>
+<img alt="Agave field with Central Valley sky" decoding="async" height="1800" loading="lazy" src="assets/images/central-valley-agave-sky.jpg" width="1350"/>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="contact-grid">
+<div class="contact-info">
+<div class="label" style="color:var(--earth);--sand:var(--earth);">Get in Touch</div>
+<h2>Partner With<br/>Central Valley Project Agave Growers</h2>
+<p style="font-size:0.95rem;color:var(--muted);line-height:1.85;font-weight:300;margin-top:1rem;">Whether you're a distillery, processor, spirits brand, or investor looking to secure a domestic supply of premium California-grown agave, we'd like to hear from you.</p>
+<h3>Contact</h3>
+<p>Ryan Beecher<br/>
+<a href="mailto:ryan@farmingd.com" style="color:var(--agave-dark);text-decoration:none;">ryan@farmingd.com</a></p>
+<p style="margin-top:0.75rem;">Jim Beecher<br/>
+<a href="mailto:jbeecher@farmingd.com" style="color:var(--agave-dark);text-decoration:none;">jbeecher@farmingd.com</a></p>
+<h3>Mailing Address</h3>
+<p>PO Box 596<br/>Five Points, CA 93624</p>
+<h3>Current Acreage</h3>
+<p>225+ acres under cultivation<br/>Est. harvest readiness: early 2030s</p>
+<div style="margin-top:2.5rem;padding:1.5rem 1.5rem 1.5rem 1.8rem;background:var(--sand-light);border-left:3px solid var(--sand);">
+<p style="font-size:0.85rem;color:var(--muted);line-height:1.8;font-weight:300;font-style:italic;">"From the same land our family has farmed since 1929 — now growing the crop that will define the next generation of California agriculture."</p>
+</div>
+</div>
+<div class="contact-logo-replacement">
+<img src="assets/cvpag7_haring.png" alt="Central Valley Project Agave 7 LLC logo" loading="lazy"/>
+</div>
+</div>
+</section>
+<footer>
+<div class="footer-logo">Central Valley Project Agave Growers 7 LLC — Five Points, California</div>
+<div class="footer-note">Family Farming Since 1929 · Central Valley Project Agave Growers 7 · © 2026</div>
+</footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
